@@ -1,81 +1,81 @@
-# 🧩 Modos do Copiloto (Ask, Edit, Plan, Agent e Study)
+# Documentação Arquitetural: Modos de Operação do Assistente (Professor Xavier)
 
-![dio/me](https://img.shields.io/badge/dio-me-ff2d55)
-![IA](https://img.shields.io/badge/IA-Assistente%20Inteligente-blue)
-![Prompt](https://img.shields.io/badge/Prompt-engineering-yellow)
+![DIO Bootcamp](https://img.shields.io/badge/DIO-Bootcamp-blue)
+![AI Assistant](https://img.shields.io/badge/AI-Data_Science_Mentor-darkgreen)
+![Prompt Engineering](https://img.shields.io/badge/Prompt-Engineering-gray)
 
-O Copiloto oferece diferentes **modos de interação** para você escolher como quer trabalhar: desde **tirar dúvidas sem mexer no código**, até **editar trechos específicos**, **planejar mudanças maiores** ou **delegar tarefas mais complexas** com um modo mais autônomo. A ideia é simples: você seleciona o modo que melhor combina com seu objetivo no momento e ganha velocidade com mais controle.
+O presente repositório documenta os modos de operação do assistente técnico estruturado para a resolução de problemas complexos em Ciência de Dados, Engenharia Geoespacial e Inteligência de Mercado. A arquitetura modular do copiloto permite transitar entre o diagnóstico passivo, a estruturação metodológica e a implementação autônoma de pipelines de dados, garantindo rigor estatístico e otimização computacional (Python/Google Earth Engine). Selecione o modo de operação adequado à etapa do seu ciclo analítico.
 
 ---
 
-# ❓ Ask
-O modo **Ask** é para fazer perguntas e entender coisas, **sem alterar seu código**. Você pode perguntar sobre um arquivo específico, um erro, uma função, uma stack trace ou até conceitos gerais.
+## Modo ASK (Consultoria e Diagnóstico)
+O modo **Ask** é projetado para análise diagnóstica e elucidação teórica, operando estritamente em **somente leitura**. O assistente atua como um consultor técnico sênior.
 
-O Copiloto lê o contexto do projeto (arquivos abertos, seleção, etc.) e responde como um **“mentor técnico”**, explicando o que está acontecendo e por quê. **Ele não modifica nada** — só analisa e explica.
+Utilização recomendada para:
+* Diagnóstico de anomalias estatísticas e vazamento de dados (Data Leakage).
+* Análise de stack traces complexos (ex: falhas de alocação de memória no Pandas ou desalinhamento de tensores).
+* Compreensão de lógicas de negócio e arquiteturas de dados existentes.
+* **Restrição:** Este modo não gera alterações no repositório; seu foco é fornecer a fundamentação para a tomada de decisão técnica.
 
 📄 **Prompt:** [prompts/prompt-ask.md](prompts/prompt-ask.md)
 
 ---
 
-# ✏️ Edit
-O modo **Edit** serve para **alterar código existente**. Você seleciona um trecho (ou um arquivo inteiro), descreve o que quer mudar, e o Copiloto aplica a modificação diretamente.
+## Modo EDIT (Refatoração e Otimização)
+O modo **Edit** é focado na intervenção direta em blocos de código pré-existentes, visando a excelência em engenharia de software e eficiência de processamento.
 
-Ideal para:
-- refactors
-- ajustes de lógica
-- melhoria de performance
-- mudança de estilo
-- conversão de linguagem
-- adicionar logs
-- tratar erros
-
-Aqui o foco é: **“pegue isso que já existe e transforme”**.
+Aplicações de engenharia exigidas:
+* Adequação estrita à PEP 8, inserção de Type Hinting e Docstrings detalhadas.
+* Refatoração de rotinas iterativas (loops) para operações vetorizadas via NumPy ou Pandas.
+* Otimização de consultas SQL complexas (Window Functions) e processamento espacial (PostGIS).
+* Aprimoramento de complexidade algorítmica e tratamento de exceções.
 
 📄 **Prompt:** [prompts/prompt-edit.md](prompts/prompt-edit.md)
 
 ---
 
-# 🧭 Plan
-Quando você pede algo mais complexo, o Copiloto pode entrar em um modo de **planejamento**, onde ele **pensa e descreve os passos antes de sair codando**.
+## Modo PLAN (Planejamento Metodológico)
+O modo **Plan** antecede a fase de codificação. O assistente estrutura metodologias robustas para mitigar riscos computacionais e garantir o alinhamento com os KPIs de negócios.
 
-Ele:
-- divide o problema em etapas
-- explica o que vai fazer
-- só depois executa
-
-Isso é muito útil para **mudanças grandes**, **novas features** ou quando você quer **validar a abordagem** antes de mexer no código.
+Entregáveis desta fase:
+* Escopo analítico e premissas estatísticas.
+* Arquitetura do pipeline de dados (ETL/ELT) e integração de ecossistemas (ex: processamento local vs. nuvem).
+* Definição de métricas de validação de modelos de Machine Learning (RMSE, AUC-ROC).
+* Mapeamento de potenciais falhas de arquitetura antes da alocação de recursos computacionais.
 
 📄 **Prompt:** [prompts/prompt-plan.md](prompts/prompt-plan.md)
 
 ---
 
-# 🤖 Agent
-O **Agent** é o modo mais “autônomo”. Ele pode **navegar pelo projeto**, **criar arquivos**, **modificar múltiplos pontos** e **manter contexto entre passos**, como se fosse um dev júnior trabalhando com você.
+## Modo AGENT (Implementação de Engenharia)
+O modo **Agent** opera com autonomia supervisionada para a construção de soluções ponta a ponta. O assistente transforma os requisitos de inteligência de mercado em código implementável.
 
-Você dá um objetivo (ex.: “implemente login com JWT”) e ele decide o que precisa ser feito em vários arquivos para chegar lá.
+Capacidades operacionais:
+* Construção e modularização de scripts Python para ingestão e tratamento de Big Data.
+* Treinamento, validação e otimização de modelos preditivos (Scikit-learn, XGBoost).
+* Automação de geoprocessamento integrando bases governamentais e processamento em nuvem.
+* Foco na tradução de resultados quantitativos em Business Insights estratégicos.
 
 📄 **Prompt:** [prompts/prompt-agent.md](prompts/prompt-agent.md)
 
 ---
 
-# 📚 Study
-O modo **Study** é focado em **aprendizado ativo**, não só em chegar à resposta ou ao código final.
+## Modo STUDY (Mentoria Acadêmica)
+O modo **Study** é dedicado ao aprofundamento rigoroso nas bases matemáticas e estatísticas que sustentam a Ciência de Dados.
 
-Em vez de simplesmente explicar ou executar, ele:
-- ensina e guia o raciocínio
-- destaca conceitos e trade-offs
-- faz perguntas reflexivas
-- avança em progressão gradual de dificuldade
-
-Funciona quase como um **tutor particular**.
+Metodologia de ensino aplicada:
+* Progressão estruturada: da nomenclatura técnica à intuição matemática (Cálculo e Álgebra Linear).
+* Demonstração prática via blocos de código vetoriais e comentados.
+* Identificação de trade-offs computacionais e armadilhas estatísticas frequentes.
+* Checkpoints cognitivos para atestar a compreensão antes de avançar na complexidade arquitetural.
 
 📄 **Prompt:** [prompts/prompt-study.md](prompts/prompt-study.md)
 
 ---
 
-# 🧠 Resumo mental rápido
-- **Ask** → entender  
-- **Plan** → planejar antes de agir  
-- **Edit** → mudar código  
-- **Agent** → executar tarefas grandes sozinho  
-- **Study** → entendimento ativo  
+## Resumo Executivo das Operações
+* **Ask:** Diagnóstico de anomalias e fundamentação teórica estrita.
+* **Edit:** Otimização de complexidade algorítmica e refatoração de código legado.
+* **Plan:** Arquitetura metodológica preditiva e mapeamento de riscos.
+* **Agent:** Desenvolvimento automatizado de pipelines analíticos ponta a ponta.
+* **Study:** Aprofundamento acadêmico e consolidação de modelos matemáticos.
